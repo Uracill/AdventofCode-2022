@@ -12,15 +12,15 @@ fun main(args: Array<String>): Unit {
             'A' -> 1
             'B' -> 2
             'C' -> 3
-            else -> Int.MAX_VALUE //Kann nicht eintreten
+            else -> Int.MAX_VALUE   //Kann nicht eintreten
         }
         player = when (game.get(2)) {
             'X' -> if(opponent == 1) 3 else if(opponent == 2) 0 else 6 //else opponent == 3
             'Y' -> if(opponent == 1) 6 else if(opponent == 2) 3 else 0
             'Z' -> if(opponent == 1) 0 else if(opponent == 2) 6 else 3
-            else -> Int.MAX_VALUE //Kann nicht eintreten
+            else -> Int.MAX_VALUE   //Kann nicht eintreten
         }
         sum += opponent + player
     }
-    print(sum) //15673
+    println(sum) //15673
 }

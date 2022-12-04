@@ -16,7 +16,6 @@ fun main(args: Array<String>): Unit {
         }
         index++
     }
-
     println(resultList.sum()) //2497
 }
 
@@ -87,7 +86,6 @@ private fun charToNumber(char: Char): Int? {
         'Z' -> 52
         else -> null
     }
-
 }
 
 

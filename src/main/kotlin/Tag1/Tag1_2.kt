@@ -29,5 +29,5 @@ fun main(args: Array<String>): Unit {
             sum = 0
         }
     }
-    print(firstBiggestValue + secondBiggestValue + thirdBiggestValue) //199357
+    println(firstBiggestValue + secondBiggestValue + thirdBiggestValue) //199357
 }

@@ -22,5 +22,5 @@ fun main(args: Array<String>): Unit {
         }
         sum += whatToPlay + gameResult
     }
-    print(sum) //10498
+    println(sum) //10498
 }

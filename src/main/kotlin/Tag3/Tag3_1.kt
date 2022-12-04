@@ -11,7 +11,6 @@ fun main(args: Array<String>): Unit {
         var compartment2 = compartments.substring(compartments.length/2, compartments.length)
         determineSimilarities(compartment1, compartment2)?.let { resultList.add(it) }
     }
-
     println(resultList.sum()) //7872
 }
 
@@ -81,5 +80,4 @@ private fun charToNumber(char: Char): Int? {
         'Z' -> 52
         else -> null
     }
-
 }
