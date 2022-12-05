@@ -6,7 +6,7 @@ fun main(args: Array<String>): Unit {
     var input = File("src/main/kotlin/Tag5/Tag5_input.txt").readLines()
     input = input.subList(10, input.size)
     var result = ""
-    var stackList = mutableListOf(
+    val stackList = mutableListOf(
         ArrayDeque(mutableListOf('W', 'D', 'G', 'B', 'H', 'R', 'V')),
         ArrayDeque(mutableListOf('J', 'N', 'G', 'C', 'R', 'F')),
         ArrayDeque(mutableListOf('L', 'S', 'F', 'H', 'D', 'N', 'J')),
@@ -20,13 +20,11 @@ fun main(args: Array<String>): Unit {
         val number = move.split("move ").get(1).split(" from").get(0).toInt()
         val from = move.split("from ").get(1).split(" to").get(0).toInt() - 1
         val to = move.split("to ").get(1).toInt() - 1
-        var changeList = mutableListOf<Char>()
+        val changeStack = ArrayDeque<Char>()
         for(i in number downTo 1) {
-            changeList.add(stackList.get(from).removeLast())
+            changeStack.addFirst(stackList.get(from).removeLast())
         }
-        for(i in changeList.size - 1 downTo 0) {
-            stackList.get(to).addLast(changeList.get(i))
-        }
+        stackList.get(to).addAll(changeStack)
     }
     for(last in stackList) {
         result = result + last.last()

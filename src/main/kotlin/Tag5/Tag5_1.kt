@@ -7,7 +7,7 @@ fun main(args: Array<String>): Unit {
     var input = File("src/main/kotlin/Tag5/Tag5_input.txt").readLines()
     input = input.subList(10, input.size)
     var result = ""
-    var stackList = mutableListOf(
+    val stackList = mutableListOf(
         ArrayDeque(mutableListOf('W', 'D', 'G', 'B', 'H', 'R', 'V')),
         ArrayDeque(mutableListOf('J', 'N', 'G', 'C', 'R', 'F')),
         ArrayDeque(mutableListOf('L', 'S', 'F', 'H', 'D', 'N', 'J')),
